@@ -7,52 +7,70 @@
   @page { size: A4; margin: 0; }
   html, body { margin: 0; padding: 0; background: #ffffff; }
   body { font-family: 'Liberation Sans', 'DejaVu Sans', Arial, Helvetica, sans-serif;
-         color: #2d323b; font-size: 8.35pt; line-height: 1.28; }
-  .page { padding: 7mm 9mm; }
-  .header { display: flex; align-items: center; column-gap: 6mm; }
-  .photo { width: 21mm; height: 21mm; border-radius: 50%; object-fit: cover; border: 1.2pt solid #c6cad1; }
-  .name { font-size: 15pt; font-weight: bold; color: #26313f; }
-  .position { font-size: 10pt; color: #26313f; margin-top: 0.5mm; font-weight: bold; }
-  .meta { margin-top: 1mm; color: #555c66; }
-  h2 { font-size: 9.6pt; text-transform: uppercase; letter-spacing: 0.8pt; color: #26313f;
-       border-bottom: 0.7pt solid #c6cad1; padding-bottom: 1mm; margin: 2.8mm 0 1.4mm 0; }
-  .row { display: grid; grid-template-columns: 26mm 1fr; column-gap: 4mm; margin-bottom: 1.1mm; }
-  .row .k { font-weight: bold; color: #3d4451; }
-  a { color: #2d323b; }
-  .oss-intro { margin-bottom: 1.2mm; }
-  ul { margin: 0.8mm 0 0 0; padding-left: 4.5mm; }
-  li { margin-bottom: 0.6mm; }
-  li b.name { font-size: 8.9pt; color: #2d323b; font-weight: bold; }
-  .job { margin-bottom: 2mm; }
-  .job-head { display: grid; grid-template-columns: 1fr 40mm; }
-  .job-company { font-weight: bold; color: #26313f; font-size: 9.8pt; }
-  .job-period { text-align: right; color: #7a8290; }
-  .job-role { font-weight: bold; margin: 0.3mm 0 0.8mm 0; }
-  .early { margin-top: 2mm; color: #555c66; }
-  .edu { margin-bottom: 1mm; }
+         color: #33383f; font-size: 8.8pt; line-height: 1.3; }
+  .page { padding: 8mm 10mm 6mm 10mm; }
+
+  /* header */
+  .header { display: flex; align-items: center; column-gap: 5mm; margin-bottom: 2mm; }
+  .photo { width: 19mm; height: 19mm; border-radius: 50%; object-fit: cover; }
+  .header .name { font-size: 16.5pt; font-weight: bold; color: #22303e; }
+  .header .spacer { flex: 1; }
+  .header .right { text-align: right; }
+  .header .position { font-size: 10.5pt; font-weight: bold; color: #22303e; }
+  .header .location { font-size: 8.3pt; color: #6a7076; }
+  .contacts { font-size: 7.9pt; color: #4a5058; margin-bottom: 1.5mm; }
+
+  h2 { font-size: 10pt; text-transform: uppercase; letter-spacing: 0.9pt; font-weight: bold;
+       color: #22303e; border-bottom: 1pt solid #22303e; padding-bottom: 0.8mm;
+       margin: 3.2mm 0 1.6mm 0; }
+
+  .row { display: grid; grid-template-columns: 22mm 1fr; column-gap: 3mm; margin-bottom: 0.9mm; }
+  .row .k { font-weight: bold; color: #22303e; }
+
+  .oss-head { display: flex; }
+  .oss-head .t { font-weight: bold; color: #22303e; }
+  .oss-head .gh { flex: 1; text-align: right; color: #22303e; font-weight: bold; }
+  .oss-sub { color: #6a7076; margin-bottom: 1mm; }
+  ul { margin: 0.7mm 0 0 0; padding-left: 4.2mm; }
+  li { margin-bottom: 0.8mm; }
+
+  .job { margin-bottom: 2.2mm; }
+  .job-head { display: flex; margin-bottom: 0.4mm; }
+  .job-company { font-weight: bold; color: #7d2a23; font-size: 9.4pt; }
+  .job-period { flex: 1; text-align: right; color: #6a7076; }
+  .job-role { font-weight: bold; color: #22303e; margin-bottom: 0.7mm; }
+
+  .early { color: #4a5058; margin-top: 1mm; }
+  .edu { display: grid; grid-template-columns: 12mm 1fr; margin-bottom: 0.9mm; }
+  .edu .y { color: #6a7076; }
 </style>
 </head>
 <body>
 <div class="page">
   <div class="header">
-  <img class="photo" src="cv_photo.png" alt="Alexey Gavrosh">
-  <div>  <div class="name">Alexey Gavrosh</div>
-  <div class="position">Senior PHP Developer</div>
-  <div class="meta">Minsk · Remote / Hybrid / Office &nbsp;·&nbsp; ganibal1953@mail.ru | +375 (29) 693-4129 | t.me/AlexeyGavrosh | linkedin.com/in/alexey-gavrosh-799236135 | github.com/AlekseyGavrosh1945</div>
+    <img class="photo" src="cv_photo.png" alt="Alexey Gavrosh">
+    <div class="name">Alexey Gavrosh</div>
+    <div class="spacer"></div>
+    <div class="right">
+      <div class="position">Senior PHP Developer</div>
+      <div class="location">Minsk · Remote / Hybrid / Office</div>
+    </div>
   </div>
+  <div class="contacts">ganibal1953@mail.ru &nbsp;|&nbsp; +375 (29) 693-4129 &nbsp;|&nbsp; t.me/AlexeyGavrosh &nbsp;|&nbsp; linkedin.com/in/alexey-gavrosh-799236135 &nbsp;|&nbsp; github.com/AlekseyGavrosh1945</div>
 
   <h2>Skills</h2>
   <div class="row"><div class="k">Backend</div><div>PHP 8, Laravel, Symfony, WordPress, Drupal, PHPUnit, Go</div></div>
   <div class="row"><div class="k">Frontend</div><div>Vue.js, Nuxt (SSR), React, JavaScript, jQuery</div></div>
   <div class="row"><div class="k">Data &amp; queues</div><div>PostgreSQL, MySQL, ClickHouse, Redis, RabbitMQ, Apache Kafka, OpenSearch, MeiliSearch</div></div>
-  <div class="row"><div class="k">APIs</div><div>REST / SOAP, OpenAPI (Swagger), microservices, WebSockets</div></div>
+  <div class="row"><div class="k">APIs</div><div>REST / SOAP, OpenAPI (Swagger), Microservices, WebSockets</div></div>
   <div class="row"><div class="k">DevOps</div><div>Docker, Kubernetes, CI/CD, Argo CD, Nginx, Linux, Git</div></div>
 
   <h2>Open Source</h2>
-  <div class="oss-intro"><b>Open Source Projects</b> — PHP / Laravel / Symfony and Go projects: production systems and portfolio snapshots · <a href="https://github.com/AlekseyGavrosh1945">github.com/AlekseyGavrosh1945</a></div>
+  <div class="oss-head"><span class="t">Open Source Projects</span><span class="gh">github.com/AlekseyGavrosh1945</span></div>
+  <div class="oss-sub">PHP / Laravel / Symfony projects and portfolio snapshots</div>
   <ul>
-    <li><b>shop-admin-bot (Go)</b>: read-only Telegram admin bot for a Laravel/MySQL webshop — button statistics (orders, products, customers), push notifications on new orders, customer chats, tickets and reviews; admin whitelist, Docker, CI with integration tests against the real schema</li>
-    <li><b>rss-aggregator (Go)</b>: Telegram RSS/Atom aggregator — worker-pool scheduler, feed autodiscovery by site URL, PostgreSQL with embedded idempotent migrations, post deduplication, Docker Compose</li>
+    <li><b>shop-admin-bot</b>: read-only Telegram admin bot in Go for a Laravel/MySQL webshop — button statistics, push notifications on new orders, customer chats, tickets and reviews; Docker, CI with integration tests</li>
+    <li><b>rss-aggregator</b>: Telegram RSS/Atom aggregator in Go — worker-pool scheduler, feed autodiscovery, PostgreSQL with embedded idempotent migrations, dedup; Docker Compose</li>
     <li><b>creoserver-portfolio</b>: open snapshots of production e-commerce systems — Laravel API, Vue / Nuxt storefront</li>
     <li><b>task-manager</b>: Symfony 7 application — Docker (nginx / php-fpm / PostgreSQL), Doctrine ORM, token-authenticated JSON API, domain events, console commands</li>
     <li><b>ymaps-org-reviews</b>: Laravel + Vue 3 SPA for collecting and analyzing Yandex Maps organization reviews (queue-based parsing)</li>
@@ -61,10 +79,10 @@
   <h2>Experience</h2>
 
   <div class="job">
-    <div class="job-head"><div class="job-company">Maxbitsolution · FinTech</div><div class="job-period">Sep 2024 – Aug 2026</div></div>
+    <div class="job-head"><span class="job-company">Maxbitsolution · FinTech</span><span class="job-period">Sep 2024 – Aug 2026</span></div>
     <div class="job-role">Senior PHP Developer</div>
     <ul>
-      <li>Stack: PHP 8, Laravel, WordPress, PostgreSQL / MySQL / ClickHouse, Redis, Kafka, RabbitMQ, OpenSearch, Swagger, Docker, Kubernetes (Argo CD), Vue / React</li>
+      <li><b>Stack:</b> PHP 8, Laravel, WordPress, PostgreSQL / MySQL / ClickHouse, Redis, Kafka, RabbitMQ, OpenSearch, Swagger, Docker, Kubernetes (Argo CD), Vue / React</li>
       <li>High-load microservice platform: dozens of services, horizontal scaling — payment processing and iGaming content delivery</li>
       <li>Decomposed the monolith into services; designed sync (REST / SOAP, Swagger) and async (Kafka) contracts; moved heavy operations to async pipelines — lower API latency, resilient to peak loads</li>
       <li>Built search and analytics on OpenSearch / ClickHouse — interactive search over millions of records</li>
@@ -75,10 +93,10 @@
   </div>
 
   <div class="job">
-    <div class="job-head"><div class="job-company">Ontid · E-commerce</div><div class="job-period">Dec 2020 – Sep 2024</div></div>
+    <div class="job-head"><span class="job-company">Ontid · E-commerce</span><span class="job-period">Dec 2020 – Sep 2024</span></div>
     <div class="job-role">Fullstack Developer</div>
     <ul>
-      <li>Stack: PHP, Symfony, Laravel, Vue.js, Nuxt (SSR), MySQL, MeiliSearch, Mollie, PayPal, SendCloud, WebSockets</li>
+      <li><b>Stack:</b> PHP, Symfony, Laravel, Vue.js, Nuxt (SSR), MySQL, MeiliSearch, Mollie, PayPal, SendCloud, WebSockets</li>
       <li>Full delivery cycle of an international e-commerce platform family: core backend, customer portal, Nuxt SSR storefront</li>
       <li>Payments (Mollie, PayPal), EU VAT, SendCloud logistics, MeiliSearch search, realtime updates via WebSockets</li>
       <li>Document flow automation, 1C / SFTP data exchange; architecture decisions for distributed applications</li>
@@ -86,10 +104,10 @@
   </div>
 
   <div class="job">
-    <div class="job-head"><div class="job-company">7745.by · E-commerce</div><div class="job-period">Nov 2018 – Nov 2020</div></div>
+    <div class="job-head"><span class="job-company">7745.by · E-commerce</span><span class="job-period">Nov 2018 – Nov 2020</span></div>
     <div class="job-role">Web Developer (Drupal / PHP / JS / Laravel)</div>
     <ul>
-      <li>Stack: PHP, Drupal, Laravel, jQuery, MySQL, SOAP, 1C</li>
+      <li><b>Stack:</b> PHP, Drupal, Laravel, jQuery, MySQL, SOAP, 1C</li>
       <li>One of the largest Belarusian online retailers: 20+ warehouses, unified catalog</li>
       <li>Search logic and business rules engine; bank payment and credit systems</li>
       <li>Marketplace API / SOAP integrations; 1C ERP (XML / CML / YML), FTP</li>
@@ -99,9 +117,9 @@
   <div class="early">Early career (2010 – 2018): engineer roles in electronics and robotics — service engineer at Leica (medical and research equipment), robotic complex maintenance at Minsk Electrotechnical Plant, microelectronics production (OJSC Integral).</div>
 
   <h2>Education &amp; Languages</h2>
-  <div class="edu">2021 — Academy of Public Administration under the President of the Republic of Belarus — International Relations</div>
-  <div class="edu">2015 — Belarusian State University of Informatics and Radioelectronics — Computer Technologies, Information Security</div>
-  <div class="edu">Languages: Russian — native · English — B1</div>
+  <div class="edu"><span class="y">2015</span><span>Belarusian State University of Informatics and Radioelectronics — Computer Technologies, Information Security</span></div>
+  <div class="edu"><span class="y">2021</span><span>Academy of Public Administration under the President of the Republic of Belarus — International Relations</span></div>
+  <div class="edu"><span class="y"></span><span>Languages: Russian — native · English — B1</span></div>
 </div>
 </body>
 </html>
